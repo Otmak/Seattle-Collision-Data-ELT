@@ -1,3 +1,9 @@
-data/*
+data/Untitled.ipynb
+data/.ipynb_checkpoints
+data/SDOT_Collisions_Vehicles.csv
+data/SDOT_Collisions_All_Years.csv
 .DS_Store
 info.txt
+.ipynb_checkpoints
+Untitled.ipynb
+Untitled1.ipynb

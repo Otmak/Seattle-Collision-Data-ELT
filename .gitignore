@@ -7,3 +7,7 @@ info.txt
 .ipynb_checkpoints
 Untitled.ipynb
 Untitled1.ipynb
+.idea
+bin
+include
+lib

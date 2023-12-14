@@ -1,44 +1,52 @@
 Here's the deal. I love motorcycles, I want to buy a motorcycle, maybe a few. But everyone tells me they are dangerous and they have more accidents than regular vehicles.
 
-I can't think of a better way to find out the truth than to analyse the collision data provided by Seattle's Department Of Transportation (SDOT).
+Since I want one, I will get to the bottom of this. I can't think of a better way to find out the truth than to analyse the collision data provided by the Seattle Department Of Transportation (SDOT).
 
 You can read more about the two files I'll be working in links below :
-1. [Collisions Vehicles] (https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sdot-collisions-vehicles/about)
+1. [Collisions Vehicles](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sdot-collisions-vehicles/about)
 2. [Collisions All year](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sdot-collisions-all-years-2/about)
 ***
 
-Database tables
 
-Collision | type |
+And then load the data into the following tables
+**Collision** table will store all the details about the collision.
+
+dtype | Collision |
 --- | --- |
-source | `string` |
-type | `string` |
-severity | `string` |
-vehicle count | `int` |
-pedestrian count | `int` |
-injuries | `int` |
-pedestrian cycle count | `string` |
+`string` |source |
+`string` |type |
+`string` |severity |
+`int` |vehicle count |
+`int` |pedestrian count |
+`int` |injuries |
+`int` |pedestrian cycle count |
 
+The **Vehicle** table will store all details available about the vehicle in question.
 
-Vehicle | type |
+dtype | Vehicle |
 --- | --- |
-type | `string` |
-vehicle condition | `string` |
-action | `string` |
+`string` |type |
+`string` |vehicle condition |
+`string` |action |
 
 
-Location | type |
+The **Location** table will store all details about that location.
+
+dtype | Location |
 --- | --- |
-type | `string` |
-latitude | `int` |
-longitude | `int` |
-address | `string` |
-road surface | `string` |
-traffic control | `string` |
-posted speed | `string` |
+`string` |type |
+`float` |latitude |
+`float` |longitude |
+`string` |address |
+`string` |road surface |
+`string` |traffic control |
+`string` |posted speed |
 
 
-Date | type |
+And finally the **Date** table store all the dates related to the event.
+
+dtype | Date |
 --- | --- |
-incident date | `string` |
-modified date | `string` |
+`string` |incident date |
+`string` |modified date |
+

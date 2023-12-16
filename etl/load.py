@@ -1,7 +1,23 @@
-from sqlalchemy import Integer, String, ForeignKey, create_engine
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
-import models
 
+class Load():
+    """docstring for Load"""
 
-def load():
-	pass
+    def __init__(self, tables, db, data):
+        self.tables = tables
+        self.db = db
+        self.data = data
+
+    def get_columns(self, table):
+        return [column.key for column in table.__table__.columns]
+
+    def load_data(self):
+
+        for i in self.data: # Load 2.0
+            for table in self.tables:
+                columns = self.get_columns(table)
+                for column in columns:
+                    try:
+                        print(':', column, i[column])
+                    except Exception as e:
+                        print('error:', e)
+        return 

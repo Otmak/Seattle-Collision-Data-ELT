@@ -2,6 +2,7 @@ data/Untitled.ipynb
 data/.ipynb_checkpoints
 data/SDOT_Collisions_Vehicles.csv
 data/SDOT_Collisions_All_Years.csv
+etl/__pycache__
 .DS_Store
 info.txt
 .ipynb_checkpoints
@@ -11,4 +12,4 @@ Untitled1.ipynb
 bin
 include
 lib
-random.py
+__pycache__

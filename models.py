@@ -42,10 +42,10 @@ class Vehicle(Base):
     vehicle_type: Mapped[str]
     vehicle_condition: Mapped[str]
     vehicle_action: Mapped[str]
-    collision_report_number: Mapped[str] = mapped_column(ForeignKey("collision.id"))
+    report_number: Mapped[str] = mapped_column(ForeignKey("collision.report_number"))
 
     def __repr__(self):
-        return f'Vehicle(id={self.id}, vehicle_type={self.vehicle_type}, vehicle_condition={self.vehicle_condition}, vehicle_action={self.vehicle_action}, report_number={self.collision_report_number})'
+        return f'Vehicle(id={self.id}, vehicle_type={self.vehicle_type}, vehicle_condition={self.vehicle_condition}, vehicle_action={self.vehicle_action}, report_number={self.report_number})'
 
 
 class Location(Base):
@@ -59,11 +59,11 @@ class Location(Base):
     road_condition: Mapped[str]
     weather: Mapped[str]
     light_condition: Mapped[str]
-    speed: Mapped[float]
-    collision_report_number: Mapped[str] = mapped_column(ForeignKey("collision.id"))
+    speed: Mapped[str]
+    report_number: Mapped[str] = mapped_column(ForeignKey("collision.report_number"))
 
     def __repr__(self):
-        return f'Location(lat={self.lat}, lon={self.lon}, location_type={self.location_type}, address={self.address}, road_condition={self.road_condition}, weather={self.weather}, light_condition={self.light_condition} speed={self.speed}, report_number={self.collision_report_number})'
+        return f'Location(lat={self.lat}, lon={self.lon}, location_type={self.location_type}, address={self.address}, road_condition={self.road_condition}, weather={self.weather}, light_condition={self.light_condition} speed={self.speed}, report_number={self.report_number})'
 
 
 class Date(Base):
@@ -73,10 +73,10 @@ class Date(Base):
     incident_date: Mapped[str]
     modified_date: Mapped[str]
     added_date: Mapped[str]
-    collision_report_number: Mapped[str] = mapped_column(ForeignKey("collision.id"))
+    report_number: Mapped[str] = mapped_column(ForeignKey("collision.report_number"))
 
     def __repr__(self):
-        return f'Date( id={self.id}, incident_date={self.incident_date}, modified_date={self.modified_date}, added_date={self.added_date} report_number={self.collision_report_number})'
+        return f'Date( id={self.id}, incident_date={self.incident_date}, modified_date={self.modified_date}, added_date={self.added_date} report_number={self.report_number})'
 
 
 

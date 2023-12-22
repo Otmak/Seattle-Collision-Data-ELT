@@ -8,6 +8,9 @@ class Transform():
 	def drop_duplicates(self):
 		return self.data.drop_duplicates()
 
+	def convert_dtype():
+		pass
+
 
 
 

@@ -1,21 +1,21 @@
 
 class Extract():
-    """Extracts data and formats it to an array of dicts"""
+    """Extracts data from the pandas data frame"""
 
     def __init__(self, job, data):
         self.job = job
         self.data = data
 
-    def get_required_data(self):
+    def get_required_data(self): # Extract specific data defined in job.
         result = dict()
-        my_list = list()
+        main_list = list()
         data = self.data
         i = 0
-        while i < len(data):
-            for key, value in self.job.items():
+        while i < len(data): # Loop over main dataframe.
+            for key, value in self.job.items(): # For every specified job, add key value to dict.
                 if key in data:
                     result[value] = data.iloc[i][key]
-            my_list.append(result)
+            main_list.append(result)
             i += 1
 
-        return my_list
+        return main_list
